@@ -18,22 +18,24 @@ public class Ex3_while {
 
         Scanner sc = new Scanner(System.in);
 
-        int num = new Random().nextInt(100) + 1;
-        int num2 = 0;
+        int answer = new Random().nextInt(100) + 1;//사용자가 맞춰야할 정답
+        System.out.println(answer);
+        int num = 0;//사용자가 입력할 값
 
-        while (num != num2) {
+        while (answer != num) {
 
             System.out.print("숫자 : ");
-            num2 = sc.nextInt();
+            num = sc.nextInt();
 
-            if (num > num2) {
+            if (answer > num) {
                 System.out.println("UP");
-            } else if (num < num2) {
+            } else if (answer < num) {
                 System.out.println("DOWN");
-
+            }else{
+                System.out.println("정답");
             }
-        }
-        System.out.println("정답입니다");
+        }//shile
+        //System.out.println("정답입니다");
 
     }// main
 }
