@@ -1,6 +1,9 @@
 package Ex_work;
 
+import java.time.Year;
 import java.util.Scanner;
+
+import javax.lang.model.util.ElementScanner6;
 
 public class Ex1_work {
     public static void main(String[] args) {
@@ -23,17 +26,26 @@ public class Ex1_work {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("년도 : ");
+        System.out.print("연도 : ");
         int year = sc.nextInt();
 
 
         // for( int i = 100; i <= year; i--){
-        if (year % 4 == 0 || year % 100 == 400) {
-            System.out.println("윤년입니다");
-        } else if (year % 4 != 0) {
-            System.out.println("평년입니다");
-        }
+        //if (year % 4 == 0 || year % 100 == 400) {
+            //System.out.println("윤년입니다");
+        //} else if (year % 4 != 0) {
+            //System.out.println("평년입니다");
+        //}
         // }
+
+        boolean res = (year % 4 == 0 && year % 100 != 0 || year % 400 == 0);
+
+        if( res ){
+            System.out.println(year + "윤년입니다");
+        }else{
+            System.out.println(year + "평년입니다");
+        }
 
     }// main
 }
+// if ( !res ) == if ( res == false )

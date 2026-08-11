@@ -17,18 +17,25 @@ public class Ex2_work {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("단 : ");
-        int a = sc.nextInt();
+        int dan = sc.nextInt();
 
-        if (a <= 1) {
-            System.out.println("2~9사이의값을 입력하세요");
-        }else if( a <= 10 ){
-            System.out.println("2~9사이의값을 입력하세요");
-        }
-        
-        for (int i = 1; i < 10; i++) {
-            System.out.println(a + " * " + i + " = " + (a * i));
-        }
+        //if (dan <= 1 || dan >= 10) {
+            //System.out.println("2~9사이의값을 입력하세요");
+        //} else {
+            for (int i = 1; 1 <= 9; i++) {
+                //System.out.println(dan + " * " + i + " = " + (dan * i));
+             //System.out.printf(" %d * %d = %d", dan, i, (dan*i));
+             System.out.printf("%d * %d = %02d\n", dan, i, (dan*i));
+            }
+        //}
 
+        // if (a <= 1 || a >= 10) {
+        // System.out.println("2~9사이의값을 입력하세요");
+        // }else{
+        // for (int i = 1; i < 10; i++) {
+        // System.out.println(a + " * " + i + " = " + (a * i));
+        // }
+        // }
         // for (int i = 0; i < 10; i++) {
         // switch (a) {
         // case 2:
