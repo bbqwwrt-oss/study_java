@@ -20,17 +20,40 @@ public class Ex4_work {
         System.out.print("수2 : ");
         int num2 = sc.nextInt();
 
-        int res = 0;
+        //int res = 0;
+        //for (int i = 1; i <= num1; i++) {
+                    //if (num1 % i ==0 && num2 % i == 0)
+                //res = i;
+            //}
 
-        for (int i = 1; i <= num1; i++) {
-            for (int j = 1; j <= num2; j++) {
-                
-                if (i % num1 == 0)
-                    if (j % num2 == 0)
-                res += i % j;    
-            }
-            
-        } 
-        System.out.print("최대공약수 : " + res);
+            //================
+        //if( num1 > num2 ){
+
+            //int num3 = num1;
+            //num1 = num2;
+            //num2 = num3;
+       // } 
+
+       // int i = num1;
+
+      //  for( ; i >= 1; i-- ){
+
+            //if(num1 % i == 0 && num2 % i == 0){
+            //    break;
+           // }
+
+       // }
+
+        //유클리드 호제법으로 최대 공약수 구하기
+        while( num2 != 0 ){
+
+            int tmp = num1 % num2;
+            num1 = num2;
+            num2 = tmp;
+
+        }
+
+            System.out.println("최대공약수 : " + num1);
+         
     }//main
 }
