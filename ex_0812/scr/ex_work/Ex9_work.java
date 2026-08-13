@@ -1,5 +1,7 @@
 package scr.ex_work;
 
+import java.util.Random;
+
 public class Ex9_work {
     public static void main(String[] args) {
         
@@ -8,6 +10,31 @@ public class Ex9_work {
 
         //17 2 45 27 9 11
         int[] lotto = new int[6];
+
+        outer : for( int i = 0; i < lotto.length; ){
+            
+                lotto[i] = new Random().nextInt(45) + 1;
+
+                //중복값 비교
+
+                for( int j = 0; j < i; j++ ){
+                    if( lotto[i] == lotto[j]){
+                        continue outer;
+                    }
+                }
+
+                System.out.print( lotto[i] + " " );
+            i++;
+
+        }
+
+
+
+       // int res = 0;
+
+        //for(int i = 1; i <= lotto.length; i++){
+           // System.out.println();
+        //}
 
 
     }//main
