@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Ex03_work {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("수1 : ");
+        int su1 = sc.nextInt();
+
+        System.out.print("수2 : ");
+        int su2 = sc.nextInt();
+
+        System.out.print("연산자 : ");
+        String op = sc.next();
+
+        switch (op) {
+            case "+":
+                System.out.printf("%d + %d = %d\n", su1, su2, su1 + su2);
+                break;
+            case "-":
+                System.out.printf("%d - %d = %d\n", su1, su2, su1 - su2);
+                break;
+            case "*":
+                System.out.printf("%d x %d = %d\n", su1, su2, su1 * su2);
+                break;
+            case "/":
+                System.out.printf("%d / %d = %.2f\n", su1, su2, (float) su1 / su2);
+                break;
+
+            default:
+                System.out.println("연산자 오류");
+                break;
+        }
+
+        // System.out.println(su1 + " "+ op + " " + su2 + " = " + su1 + su2);
+
+    }// main
+}
