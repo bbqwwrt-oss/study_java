@@ -4,9 +4,9 @@ public class Ex3_String {
     public static void main(String[] args){
 
 
-        String id = "801122-33445566";
+        String id = "801122-3344556";
 
-        if (id.trim().length() < 14 || id.trim().charAt(6) != '-') {
+        if (id.trim().length() != 14 || id.trim().charAt(6) != '-') {
             System.out.println("주민번호가 잘못돼었다.");
         } else {
             String year = id.substring(0, 2);
