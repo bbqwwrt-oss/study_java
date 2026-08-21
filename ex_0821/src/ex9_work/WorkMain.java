@@ -1,0 +1,32 @@
+package ex9_work;
+
+public class WorkMain {
+    public static void main(String[] args) {
+
+        // 1~45사이에서 중복되지 않는 난수 6개를 출력하는 로또번호 생성기 만들기
+
+        int[] lotto = new int[6];
+
+        WorkSub ws = new WorkSub();
+        ws.myLotto(lotto);
+
+        for (int i = 0; i < lotto.length; i++) {
+            System.out.print(lotto[i] + " ");
+        }
+
+        // int ran = new Random().nextInt(46);
+
+        // int num = 0;
+
+        // for( int i = 0; i < lotto.length;){
+        // for( int j = 0; j < lotto[i]; j++)
+        // if(lotto[i] == lotto[j])
+        // continue;
+        // else
+        // lotto[i] += ran;
+        // i++;
+
+        // System.out.print(lotto[i]);
+        // }
+    }
+}
