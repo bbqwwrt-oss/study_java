@@ -13,23 +13,35 @@ public class Graph {
         // . . . .
         //9의 갯수 : ########## 10
 
-        int ran;
-        int cnt = 0;
-        String str = "#";
+        Random rnd = new Random();
+
+        int[] arr = new int[10];
+
+        for( int i = 0; i < 100; i++ ){
+            int r = rnd.nextInt(10);
+            arr[r]++;
+        }
+
+        Graphsub g = new Graphsub();
+        g.println(arr);
+        
+        // int ran;
+        // int cnt = 0;
+        // String str = "#";
 
         
-        for( int i = 0; i <= 9; i ++ ){
+        // for( int i = 0; i <= 9; i ++ ){
             
-            for( int j = 1; j <= 100; j++ ){
-                ran = new Random().nextInt(9) + 0;
+        //     for( int j = 1; j <= 100; j++ ){
+        //         ran = new Random().nextInt(9) + 0;
                 
-                if( i == j){
-                    cnt++;
-                }
-            }
-            System.out.println(i + "의 갯수 : " + cnt);
+        //         if( i == j){
+        //             cnt++;
+        //         }
+        //     }
+        //     System.out.println(i + "의 갯수 : " + cnt);
             
-        }     
+        
             
         
 
