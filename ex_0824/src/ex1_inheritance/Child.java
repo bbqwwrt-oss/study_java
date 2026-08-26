@@ -1,5 +1,9 @@
 package ex1_inheritance;
 
-public class Child {
-    31
+public class Child extends Parent{
+    
+    String car = "소나타";
+    
+
+
 }
