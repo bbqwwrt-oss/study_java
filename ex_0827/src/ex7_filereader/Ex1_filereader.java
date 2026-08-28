@@ -1,0 +1,40 @@
+package ex7_filereader;
+
+import java.io.File;
+import java.io.FileReader;
+
+public class Ex1_filereader {
+    public static void main(String[] args) {
+        
+        String path = "C:/myfile/test.txt";
+        File f = new File(path);
+
+        //최대 2byte까지 읽어올수 있는 char기반의 스트림
+        FileReader fr = null;
+
+        try {
+            
+            fr = new FileReader(f);
+
+            int code = 0;
+
+            while ( (code = fr.read()) != -1 ) {               
+                System.out.print( (char)code );
+            }
+        } catch (Exception e) {
+            // TODO: handle exception
+        } finally {
+
+            try {
+                if( fr != null ){
+                    fr.close();
+                }
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+
+        }
+
+
+    }//main
+}
