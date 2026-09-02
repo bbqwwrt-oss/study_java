@@ -1,0 +1,19 @@
+package ex3_listener;
+
+import java.awt.*;
+
+public class FrameMain {
+    public static void main(String[] args) {
+        
+        Frame f = new Frame();
+        // f.setSize(300, 300);
+        // f.setLocation(500, 200);
+        f.setBounds(500, 200, 300, 300);
+
+        //우상단 x버튼 클릭 감지
+        f.addWindowListener( new Myevent() );
+
+        f.setVisible(true);
+
+    }//main
+}
